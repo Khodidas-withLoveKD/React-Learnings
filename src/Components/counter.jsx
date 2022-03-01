@@ -3,13 +3,13 @@ import React, { Component } from 'react'
 class Counter extends React.Component {
 	state = {
 		count: 0,
-		tags: ['tag1', 'tag2', 'tag3']
+		tags: ['tag1', 'tag2', 'tag3'],
 	}
 
 	styles = {
 		fontSize: 20,
 		fontWeight: 'bold',
-		color: 'black'
+		color: 'black',
 	}
 
 	render() {
@@ -24,13 +24,25 @@ class Counter extends React.Component {
 				>
 					Increment
 				</button>
+				<div>
+					{this.state.tags.length === 0 && 'Please make a tag!!'}
+					{this.returnList()}
+				</div>
+			</React.Fragment>
+		)
+	}
+
+	returnList() {
+		if (this.state.tags.length)
+			return (
 				<ul>
 					{this.state.tags.map((tag) => (
 						<li key={tag}>{tag}</li>
 					))}
 				</ul>
-			</React.Fragment>
-		)
+			)
+
+		return <p>There are no tags babes!!</p>
 	}
 
 	getBadgeClasses() {
