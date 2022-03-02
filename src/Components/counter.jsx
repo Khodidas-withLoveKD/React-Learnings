@@ -6,11 +6,11 @@ class Counter extends React.Component {
 		tags: ['tag1', 'tag2', 'tag3'],
 	}
 
-	constructor() {
-		super()
-		console.log('constructor | this = ', this)
-		this.handleIncrement = this.handleIncrement.bind(this)
-	}
+	// constructor() {
+	// 	super()
+	// 	console.log('constructor | this = ', this)
+	// 	this.handleIncrement = this.handleIncrement.bind(this)
+	// }
 
 	styles = {
 		fontSize: 20,
@@ -39,7 +39,7 @@ class Counter extends React.Component {
 		)
 	}
 
-	handleIncrement() {
+	handleIncrement = () => {
 		console.log('Increment clicked | count = ', this)
 	}
 
