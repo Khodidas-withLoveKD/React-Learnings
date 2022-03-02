@@ -21,18 +21,23 @@ class Counter extends React.Component {
 				<button
 					style={{ fontSize: 30, fontWeight: 'bolder' }}
 					className="btn btn-warning btn-sm"
+					onClick={this.handleIncrement}
 				>
 					Increment
 				</button>
 				<div>
-					{this.state.tags.length === 0 && 'Please make a tag!!'}
-					{this.returnList()}
+					{this.state.tags.length === 0 && 'Please create a new tag!!'}
+					{this.renderTags()}
 				</div>
 			</React.Fragment>
 		)
 	}
 
-	returnList() {
+	handleIncrement() {
+		console.log('Increment clicked | count = ', this)
+	}
+
+	renderTags() {
 		if (this.state.tags.length)
 			return (
 				<ul>
