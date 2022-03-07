@@ -8,10 +8,10 @@ class Home extends React.Component {
 				<div class="App">
 					<h2>All Routes</h2>
 					<h6>
-						<Link to="/counter">Counter</Link>
+						<Link to="/counters">Counters</Link>
 					</h6>
 					<h6>
-						<Link to="/router-test">Router Test</Link>
+						<Link to="/counter">Counter</Link>
 					</h6>
 				</div>
 			</React.Fragment>
