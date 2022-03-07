@@ -16,7 +16,7 @@ class Counter extends React.Component {
 		console.log(this.props)
 		return (
 			<div>
-				{this.props.children}
+				<h4>Counter #{this.props.id}</h4>
 				<span style={this.styles} className={this.getBadgeClasses()}>
 					{this.formatCount()}
 				</span>
@@ -27,12 +27,22 @@ class Counter extends React.Component {
 				>
 					Increment
 				</button>
-				{/* <div>
-					{this.state.tags.length === 0 && 'Please create a new tag!!'}
-					{this.renderTags()}
-				</div> */}
+				<div
+					onClick={this.props.onDelete}
+					className="button btn btn-danger btn-sm m-2"
+				>
+					Delete
+				</div>
+				<div>
+					{/* {this.state.tags.length === 0 && 'Please create a new tag!!'}
+					{this.renderTags()} */}
+				</div>
 			</div>
 		)
+	}
+
+	handleDelete() {
+		console.log('deleted')
 	}
 
 	handleIncrement = (product) => {
