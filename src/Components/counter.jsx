@@ -21,19 +21,20 @@ class Counter extends React.Component {
 				<button
 					style={{ fontSize: 30, fontWeight: 'bolder' }}
 					className="btn btn-warning btn-sm"
-					onClick={this.handleIncrement}
+					onClick={() => this.handleIncrement({ count: 1 })}
 				>
 					Increment
 				</button>
-				<div>
+				{/* <div>
 					{this.state.tags.length === 0 && 'Please create a new tag!!'}
-					{/* {this.renderTags()} */}
-				</div>
+					{this.renderTags()}
+				</div> */}
 			</React.Fragment>
 		)
 	}
 
-	handleIncrement = () => {
+	handleIncrement = (product) => {
+		console.log('product:', product)
 		this.setState({ count: this.state.count + 1 })
 	}
 
