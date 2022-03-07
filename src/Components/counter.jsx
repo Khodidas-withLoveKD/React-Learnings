@@ -27,14 +27,14 @@ class Counter extends React.Component {
 				</button>
 				<div>
 					{this.state.tags.length === 0 && 'Please create a new tag!!'}
-					{this.renderTags()}
+					{/* {this.renderTags()} */}
 				</div>
 			</React.Fragment>
 		)
 	}
 
 	handleIncrement = () => {
-		console.log('Increment clicked | count = ', this)
+		this.setState({ count: this.state.count + 1 })
 	}
 
 	renderTags() {

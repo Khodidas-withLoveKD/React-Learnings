@@ -5,14 +5,15 @@ class Home extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<h2>This is home page</h2>
-				Here we will have all routes
-				<h6>
-					<Link to="/counter">Counter</Link>
-				</h6>
-				<h6>
-					<Link to="/router-test">Router Test</Link>
-				</h6>
+				<div class="App">
+					<h2>All Routes</h2>
+					<h6>
+						<Link to="/counter">Counter</Link>
+					</h6>
+					<h6>
+						<Link to="/router-test">Router Test</Link>
+					</h6>
+				</div>
 			</React.Fragment>
 		)
 	}

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import Counter from './Components/counter.jsx'
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
