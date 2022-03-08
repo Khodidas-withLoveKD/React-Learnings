@@ -24,6 +24,12 @@ class Counters extends React.Component {
 		const counters = this.state.counters.filter((c) => c.id !== counterId)
 		this.setState({ counters })
 	}
+	incrementCounter = (counter) => {
+		const counters = [...this.state.counters]
+		const index = counters.indexOf(counter)
+		counters[index].value++
+		this.setState({ counters })
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -37,6 +43,7 @@ class Counters extends React.Component {
 					<Counter
 						key={counter.id}
 						onDelete={this.deleteCounter}
+						onIncrement={this.incrementCounter}
 						counter={counter}
 					/>
 				))}
