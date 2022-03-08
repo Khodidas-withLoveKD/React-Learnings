@@ -6,13 +6,15 @@ class Counters extends React.Component {
 	state = {
 		counters: [
 			{ id: 1, value: 0 },
-			{ id: 2, value: 1 },
-			{ id: 3, value: 2 },
+			{ id: 2, value: 0 },
+			{ id: 3, value: 1 },
 			{ id: 4, value: 3 },
 		],
 	}
-	deleteCounter() {
-		console.log('Counter deleted')
+	deleteCounter = (counterId) => {
+		console.log('Counter deleted with ID = ', counterId)
+		const counters = this.state.counters.filter((c) => c.id !== counterId)
+		this.setState({ counters })
 	}
 	render() {
 		return (
@@ -21,8 +23,7 @@ class Counters extends React.Component {
 					<Counter
 						key={counter.id}
 						onDelete={this.deleteCounter}
-						value={counter.value}
-						id={counter.id}
+						counter={counter}
 					/>
 				))}
 			</React.Fragment>
