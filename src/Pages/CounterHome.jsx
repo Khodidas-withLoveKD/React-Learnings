@@ -1,8 +1,7 @@
-import { logRoles } from '@testing-library/react'
 import React from 'react'
 
-import Counters from './counters'
-import NavBar from './navbar'
+import Counters from '../Components/CounterTutorial/Counters'
+import NavBar from '../Components/CounterTutorial/NavBar'
 
 class CounterHome extends React.Component {
 	state = {

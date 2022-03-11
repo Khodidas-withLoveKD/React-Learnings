@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
-import CounterHome from './Components/counterHome'
-import Home from './Components/Home'
+import CounterHome from './Pages/CounterHome'
+import Home from './Pages/Home'
 
 import './App.css'
 
