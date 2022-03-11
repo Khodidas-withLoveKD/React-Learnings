@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 
 const useStateHook = () => {
-	const countInitial = () => {
-		console.log('loaded')
-		return 4
-	}
-	const [count, setCount] = useState(() => countInitial())
+	const [count, setCount] = useState(4)
 
 	const decrementCount = () => {
 		setCount((prevCount) => prevCount - 1)
