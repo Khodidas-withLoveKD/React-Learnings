@@ -24,7 +24,7 @@ class CounterHome extends React.Component {
 		})
 		console.log('CounterVal = ', counterVal)
 		this.setState({ counterValue: counterVal })
-		//! TODO: Update it before render
+		// TODO: Update it before render
 		console.log('counterVALUE = ', this.state.counterValue)
 	}
 	resetCounters = () => {
@@ -39,6 +39,7 @@ class CounterHome extends React.Component {
 	deleteCounter = (counterId) => {
 		console.log('Counter deleted with ID = ', counterId)
 		const counters = this.state.counters.filter((c) => c.id !== counterId)
+		// TODO: Also update total quantity when deleting
 		this.setState({ counters })
 	}
 	incrementCounter = (counter) => {
