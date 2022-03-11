@@ -4,7 +4,8 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import CounterHome from './Pages/CounterHome'
 import Home from './Pages/Home'
 import Hooks from './Pages/Hooks/HooksHome'
-import UseState from './Pages/Hooks/UseState'
+import UseEffectHook from './Pages/Hooks/UseEffectHook'
+import UseStateHook from './Pages/Hooks/UseStateHook'
 
 import './App.css'
 
@@ -16,7 +17,8 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/counters" element={<CounterHome />} />
 					<Route path="/hooks" element={<Hooks />} />
-					<Route path="/hooks/use-state" element={<UseState />} />
+					<Route path="/hooks/use-state-hook" element={<UseStateHook />} />
+					<Route path="/hooks/use-effect-hook" element={<UseEffectHook />} />
 				</Routes>
 			</Router>
 		</React.Fragment>

@@ -6,10 +6,10 @@ const HooksHome = () => {
 		<div className="App">
 			<h2>Hook Routes</h2>
 			<h6>
-				<Link to={'/hooks/use-state'}>useState</Link>
+				<Link to={'/hooks/use-state-hook'}>useState</Link>
 			</h6>
 			<h6>
-				<Link to={'/hooks/use-effect'}>useEffect</Link>
+				<Link to={'/hooks/use-effect-hook'}>useEffect</Link>
 			</h6>
 		</div>
 	)
