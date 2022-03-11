@@ -7,6 +7,7 @@ class Counter extends React.Component {
 		color: 'black',
 	}
 	render() {
+		const { onIncrement, onDelete, counter } = this.props
 		return (
 			<div>
 				<span style={this.styles} className={this.getBadgeClasses()}>
@@ -15,12 +16,12 @@ class Counter extends React.Component {
 				<button
 					style={{ fontSize: 20, fontWeight: 'bolder' }}
 					className="btn btn-warning btn-sm"
-					onClick={() => this.props.onIncrement(this.props.counter)}
+					onClick={() => onIncrement(counter)}
 				>
 					Increment
 				</button>
 				<button
-					onClick={() => this.props.onDelete(this.props.counter.id)}
+					onClick={() => onDelete(counter.id)}
 					className="button btn btn-danger btn-sm m-2"
 				>
 					Delete

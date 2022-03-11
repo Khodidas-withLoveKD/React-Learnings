@@ -17,7 +17,6 @@ class CounterHome extends React.Component {
 	constructor() {
 		super()
 		console.log('constructor')
-		// count it initially
 		let counterVal = 0
 		this.state.counters.forEach((counter) => {
 			counterVal += counter.value
@@ -27,6 +26,7 @@ class CounterHome extends React.Component {
 		// TODO: Update it before render
 		console.log('counterVALUE = ', this.state.counterValue)
 	}
+
 	resetCounters = () => {
 		console.log('Resetting counter')
 		const counters = this.state.counters.map((counter) => {
@@ -36,12 +36,14 @@ class CounterHome extends React.Component {
 		this.setState({ counters })
 		this.setState({ counterValue: 0 })
 	}
+
 	deleteCounter = (counterId) => {
 		console.log('Counter deleted with ID = ', counterId)
 		const counters = this.state.counters.filter((c) => c.id !== counterId)
 		// TODO: Also update total quantity when deleting
 		this.setState({ counters })
 	}
+
 	incrementCounter = (counter) => {
 		const counters = [...this.state.counters]
 		const index = counters.indexOf(counter)
@@ -49,6 +51,7 @@ class CounterHome extends React.Component {
 		this.setState({ counters })
 		this.setState({ counterValue: this.state.counterValue + 1 })
 	}
+
 	render() {
 		return (
 			<div>
