@@ -11,7 +11,7 @@ class Home extends React.Component {
 						<Link to="/counters">Counters</Link>
 					</h6>
 					<h6>
-						<Link to="/usestate-hook">useState Hook</Link>
+						<Link to="/hooks">Hooks</Link>
 					</h6>
 				</div>
 			</React.Fragment>

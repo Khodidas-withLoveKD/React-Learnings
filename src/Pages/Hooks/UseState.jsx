@@ -5,7 +5,9 @@ const useStateHook = () => {
 
 	const decrementCount = () => {
 		setCount((prevCount) => prevCount - 1)
-		setCount((prevCount) => prevCount - 1)
+	}
+	const incrementCount = () => {
+		setCount((prevCount) => prevCount + 1)
 	}
 	return (
 		<div>
@@ -16,7 +18,12 @@ const useStateHook = () => {
 				-
 			</button>
 			<span>{count}</span>
-			<button className="btn bg-secondary m-2 text-light">+</button>
+			<button
+				onClick={incrementCount}
+				className="btn bg-secondary m-2 text-light"
+			>
+				+
+			</button>
 		</div>
 	)
 }
