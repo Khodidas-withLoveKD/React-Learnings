@@ -1,3 +1,4 @@
+import { logRoles } from '@testing-library/react'
 import React from 'react'
 
 import Counters from './counters'
@@ -23,6 +24,7 @@ class CounterHome extends React.Component {
 		})
 		console.log('CounterVal = ', counterVal)
 		this.setState({ counterValue: counterVal })
+		//! TODO: Update it before render
 		console.log('counterVALUE = ', this.state.counterValue)
 	}
 	resetCounters = () => {
@@ -49,7 +51,10 @@ class CounterHome extends React.Component {
 	render() {
 		return (
 			<div>
-				<NavBar counterValue={this.state.counterValue} />
+				<NavBar
+					totalQuantity={this.state.counterValue}
+					totalItems={this.state.counters.filter((c) => c.value > 0).length}
+				/>
 				<Counters
 					counters={this.state.counters}
 					onReset={this.resetCounters}

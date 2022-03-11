@@ -8,8 +8,15 @@ class NavBar extends React.Component {
 					<div className="container-fluid">
 						<a className="navbar-brand">Navbar</a>
 					</div>
-					{this.props.counterValue}
 				</nav>
+				Total Items
+				<span className="badge rounded-pill bg-info m-2 text-dark">
+					{this.props.totalItems}
+				</span>
+				Total Quantity
+				<span className="badge rounded-pill bg-info m-2 text-dark">
+					{this.props.totalQuantity}
+				</span>
 			</div>
 		)
 	}
