@@ -6,6 +6,8 @@ import Home from './Pages/Home'
 import Hooks from './Pages/Hooks/HooksHome'
 import UseEffectHook from './Pages/Hooks/UseEffectHook'
 import UseStateHook from './Pages/Hooks/UseStateHook'
+import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
+import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
 
 import './App.css'
 
@@ -19,6 +21,11 @@ function App() {
 					<Route path="/hooks" element={<Hooks />} />
 					<Route path="/hooks/use-state-hook" element={<UseStateHook />} />
 					<Route path="/hooks/use-effect-hook" element={<UseEffectHook />} />
+					<Route path="/work-experiments" element={<WorkExperiments />} />
+					<Route
+						path="/work-experiments/color-code-retention"
+						element={<ColorCodeRetention />}
+					/>
 				</Routes>
 			</Router>
 		</React.Fragment>

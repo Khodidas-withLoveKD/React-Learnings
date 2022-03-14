@@ -13,6 +13,9 @@ class Home extends React.Component {
 					<h6>
 						<Link to="/hooks">Hooks</Link>
 					</h6>
+					<h6>
+						<Link to="/work-experiments/">Work Experiments</Link>
+					</h6>
 				</div>
 			</React.Fragment>
 		)
