@@ -11,6 +11,10 @@ class FunctionalProgrammingInJS extends React.Component {
 	// passing it as another function
 	sayItAgain() {
 		return this.sayHello()
+		// OR
+		// return function () {
+		//   console.log('Hello World')
+		// }
 	}
 	render() {
 		console.log(`fn = ${this.fn}`)
