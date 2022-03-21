@@ -19,14 +19,22 @@ class CounterHome extends React.Component {
 	}
 	componentDidMount() {
 		console.log('App - Mounted')
+		this.getTotalQuantityOfItems()
+		console.log('MOUNT counterVALUE = ', this.state.counterValue)
+		console.log('NOtice the value of counterValue is still nothing')
+	}
+	componentDidUpdate(prevProps, prevState) {
+		console.log('prevState:', prevState)
+		console.log('currState:', this.state)
+		console.log('App - updated')
+	}
+	getTotalQuantityOfItems() {
 		let counterVal = 0
 		this.state.counters.forEach((counter) => {
 			counterVal += counter.value
 		})
 		console.log('CounterVal = ', counterVal)
 		this.setState({ counterValue: counterVal })
-		// TODO: Update it before render
-		console.log('counterVALUE = ', this.state.counterValue)
 	}
 	resetCounters = () => {
 		console.log('Resetting counter')
@@ -41,8 +49,11 @@ class CounterHome extends React.Component {
 	deleteCounter = (counterId) => {
 		console.log('Counter deleted with ID = ', counterId)
 		const counters = this.state.counters.filter((c) => c.id !== counterId)
-		// TODO: Also update total quantity when deleting
-		this.setState({ counters })
+		this.setState({ counters }, () => {
+			console.log('Delete counters callback = ', this.state.counters)
+			this.getTotalQuantityOfItems()
+		})
+		console.log('DELETE counters = ', this.state.counters)
 	}
 
 	incrementCounter = (counter) => {
