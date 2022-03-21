@@ -16,6 +16,11 @@ class Home extends React.Component {
 					<h6>
 						<Link to="/work-experiments/">Work Experiments</Link>
 					</h6>
+					<h6>
+						<Link to="/functional-programming-in-js/">
+							Functional Programming in JS
+						</Link>
+					</h6>
 				</div>
 			</React.Fragment>
 		)

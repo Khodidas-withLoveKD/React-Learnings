@@ -10,6 +10,7 @@ import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
 
 import './App.css'
+import FunctionalProgrammingInJS from './Pages/FunctionalProgrammingInJS'
 
 function App() {
 	return (
@@ -25,6 +26,10 @@ function App() {
 					<Route
 						path="/work-experiments/color-code-retention"
 						element={<ColorCodeRetention />}
+					/>
+					<Route
+						path="/functional-programming-in-js"
+						element={<FunctionalProgrammingInJS />}
 					/>
 				</Routes>
 			</Router>
