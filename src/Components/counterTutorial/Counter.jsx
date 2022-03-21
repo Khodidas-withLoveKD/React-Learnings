@@ -6,6 +6,9 @@ class Counter extends React.Component {
 		fontWeight: 'bold',
 		color: 'black',
 	}
+	componentWillUnmount() {
+		console.log('Counter - unmount')
+	}
 	render() {
 		console.log('Counter - renedered')
 		const { onIncrement, onDelete, counter } = this.props
