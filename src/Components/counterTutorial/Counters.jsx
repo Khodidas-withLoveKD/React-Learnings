@@ -4,6 +4,7 @@ import Counter from './Counter'
 
 class Counters extends React.Component {
 	render() {
+		console.log('Countersss - rendered')
 		const { onReset, onDelete, onIncrement, counters } = this.props
 		return (
 			<React.Fragment>

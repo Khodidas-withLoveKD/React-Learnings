@@ -7,6 +7,7 @@ class Counter extends React.Component {
 		color: 'black',
 	}
 	render() {
+		console.log('Counter - renedered')
 		const { onIncrement, onDelete, counter } = this.props
 		return (
 			<div>

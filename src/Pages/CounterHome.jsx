@@ -15,7 +15,7 @@ class CounterHome extends React.Component {
 	}
 	constructor() {
 		super()
-		console.log('constructor')
+		console.log('App - constructor')
 		let counterVal = 0
 		this.state.counters.forEach((counter) => {
 			counterVal += counter.value
@@ -25,7 +25,9 @@ class CounterHome extends React.Component {
 		// TODO: Update it before render
 		console.log('counterVALUE = ', this.state.counterValue)
 	}
-
+	componentDidMount() {
+		console.log('App - Mounted')
+	}
 	resetCounters = () => {
 		console.log('Resetting counter')
 		const counters = this.state.counters.map((counter) => {
@@ -52,6 +54,7 @@ class CounterHome extends React.Component {
 	}
 
 	render() {
+		console.log('App - rendered')
 		return (
 			<div>
 				<NavBar
