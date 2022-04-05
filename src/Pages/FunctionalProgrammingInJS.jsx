@@ -1,15 +1,18 @@
 import React from 'react'
-
+import {compose, pipe} from 'lodash/fp'
 const FunctionalProgrammingInJS = () => {
 	let input = '  JAvaScrIpT   '
 
 	const trim = str => str.trim()
 	const toLowerCase = str => str.toLowerCase()
-	const wrapInDiv = str => `<lofa>${str}</div>`
-	const result = wrapInDiv(toLowerCase(trim(input)))
-	return (<React.Fragment>{result}</React.Fragment>)
+	const wrapInDiv = str => `<div>${str}</div>`
+	// const result = wrapInDiv(toLowerCase(trim(input)))
+	// const transform = compose(wrapInDiv, toLowerCase, trim)
+	const transform = pipe(trim, toLowerCase, wrapInDiv)
+	const result = transform(input)
+	return (<div>{result}</div>)
 }
- 
+
 export default FunctionalProgrammingInJS
 
 // class FunctionalProgrammingInJS extends React.Component {
