@@ -1,5 +1,7 @@
+import { Map } from 'immutable'
+import { compose, pipe } from 'lodash/fp'
 import React from 'react'
-import {compose, pipe} from 'lodash/fp'
+
 const FunctionalProgrammingInJS = () => {
 	let input = '  JAvaScrIpT   '
 
@@ -28,9 +30,9 @@ const FunctionalProgrammingInJS = () => {
 	const person = {name: 'KD', address: {city: 'Surat'}}
 	const updatedPerson = Object.assign({}, person, {age: 30})
 	const usingSpread = {...updatedPerson, name: 'KKKK', height: 45}
-	console.log(`person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)}`)
+	// console.log(`person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)}`)
 	usingSpread.address.city = "KDKDKDK"
-	console.log(`LATER \n person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)}`)
+	// console.log(`LATER \n person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)}`)
 	const newObj = {
 		...person,
 		address: {
@@ -39,7 +41,12 @@ const FunctionalProgrammingInJS = () => {
 		}
 	}
 	newObj.address.city = 'DElhi'
-	console.log(`AGIAN \n person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)} | newObj = ${JSON.stringify(newObj)}`)
+	// console.log(`AGIAN \n person = ${JSON.stringify(person)} | updated = ${JSON.stringify(updatedPerson)} | usingSpread = ${JSON.stringify(usingSpread)} | newObj = ${JSON.stringify(newObj)}`)
+	
+	// ------- Using Immutable ------------
+	const book = Map({title: 'Harry Potter'})
+
+	console.log('book = ', book['title'])
 	return (<div>{result}</div>)
 }
 
