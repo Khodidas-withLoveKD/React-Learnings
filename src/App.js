@@ -8,6 +8,7 @@ import Hooks from './Pages/Hooks/HooksHome'
 import UseEffectHook from './Pages/Hooks/UseEffectHook'
 import UseRefHook from './Pages/Hooks/useRef'
 import UseStateHook from './Pages/Hooks/UseStateHook'
+import Redux from './Pages/Redux/ReduxHome'
 import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
 
@@ -32,6 +33,10 @@ function App() {
 					<Route
 						path="/functional-programming-in-js"
 						element={<FunctionalProgrammingInJS />}
+					/>
+					<Route
+						path="/redux"
+						element={<Redux />}
 					/>
 				</Routes>
 			</Router>

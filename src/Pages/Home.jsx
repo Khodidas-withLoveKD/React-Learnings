@@ -21,6 +21,11 @@ class Home extends React.Component {
 							Functional Programming in JS
 						</Link>
 					</h6>
+					<h6>
+						<Link to="/redux">
+							Redux
+						</Link>
+					</h6>
 				</div>
 			</React.Fragment>
 		)
