@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { scrimbaCourseRoutes } from './Const/InternalRoutes'
+import { scrimbaCourseRoutes } from './Routes/InternalRoutes'
 
 class Home extends React.Component {
 	render() {

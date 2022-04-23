@@ -1,7 +1,8 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
-import { scrimbaCourseRoutes } from './Pages/Const/InternalRoutes'
+import {pathNames} from './Pages/Routes/homeRoutes' 
+import { scrimbaCourseRoutes, hooksRoutes } from './Pages/Routes/InternalRoutes'
 import CounterHome from './Pages/CounterHome'
 import FunctionalProgrammingInJS from './Pages/FunctionalProgrammingInJS'
 import Home from './Pages/Home'
@@ -23,10 +24,10 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/counters" element={<CounterHome />} />
-					<Route path="/hooks" element={<Hooks />} />
-					<Route path="/hooks/use-state-hook" element={<UseStateHook />} />
-					<Route path="/hooks/use-effect-hook" element={<UseEffectHook />} />
-					<Route path="/hooks/use-ref-hook" element={<UseRefHook />} />
+					<Route path={pathNames.HOOKS} element={<Hooks />} />
+					<Route path={hooksRoutes.USE_STATE_HOOK} element={<UseStateHook />} />
+					<Route path={hooksRoutes.USE_EFFECT_HOOK} element={<UseEffectHook />} />
+					<Route path={hooksRoutes.USE_REF_HOOK} element={<UseRefHook />} />
 					<Route path="/work-experiments" element={<WorkExperiments />} />
 					<Route
 						path="/work-experiments/color-code-retention"
