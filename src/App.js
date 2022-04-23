@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
+import { scrimbaCourseRoutes } from './Pages/Const/InternalRoutes'
 import CounterHome from './Pages/CounterHome'
 import FunctionalProgrammingInJS from './Pages/FunctionalProgrammingInJS'
 import Home from './Pages/Home'
@@ -11,6 +12,7 @@ import UseStateHook from './Pages/Hooks/UseStateHook'
 import Redux from './Pages/Redux/ReduxHome'
 import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
+import DigitalBusinessCard from './Pages/Scrimba Course/Project 1/DigitalBusinessCard'
 
 import './App.css'
 
@@ -37,6 +39,10 @@ function App() {
 					<Route
 						path="/redux"
 						element={<Redux />}
+					/>
+					<Route
+						path={scrimbaCourseRoutes.DIGITAL_BUSSINESS_CARD}
+						element={<DigitalBusinessCard />}
 					/>
 				</Routes>
 			</Router>

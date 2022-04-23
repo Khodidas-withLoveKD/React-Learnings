@@ -1,8 +1,5 @@
 import React from 'react'
 
-let sayHello = () => {
-	console.log('Hello')
-}
 const NavBar = ({ totalItems, totalQuantity }) => {
 	return (
 		<div>
@@ -22,5 +19,4 @@ const NavBar = ({ totalItems, totalQuantity }) => {
 		</div>
 	)
 }
-sayHello()
 export default NavBar

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { scrimbaCourseRoutes } from './Const/InternalRoutes'
+
 class Home extends React.Component {
 	render() {
 		return (
@@ -24,6 +26,11 @@ class Home extends React.Component {
 					<h6>
 						<Link to="/redux">
 							Redux
+						</Link>
+					</h6>
+					<h6>
+						<Link to={scrimbaCourseRoutes.DIGITAL_BUSSINESS_CARD}>
+							Scrimba Course
 						</Link>
 					</h6>
 				</div>
