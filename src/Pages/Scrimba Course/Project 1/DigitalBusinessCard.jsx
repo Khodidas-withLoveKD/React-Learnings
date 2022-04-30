@@ -1,16 +1,23 @@
 import React from 'react';
 
+import Card from './InnerCard'
+
 const DigitalBusinessCard = () => {
-  const containerDiv = {
+  const container = {
     width: '34.375rem',
     height: '54.25rem',
     backgroundColor: '#23252C',
+    margin: 'auto',
+    justifyContent: 'center',
+    display: 'flex',
+    alignItems: 'center'
   }
+  
+  // TODO: make theme changeable
   return (
-    <React.Fragment>
-      <div style={containerDiv}>
+      <div style={container}>
+        <Card />
       </div>
-    </React.Fragment>
    );
 }
  
