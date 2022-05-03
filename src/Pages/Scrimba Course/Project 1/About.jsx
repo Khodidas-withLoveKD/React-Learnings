@@ -1,48 +1,64 @@
 import React from 'react';
 
 const About = () => {
-  const centerItem = {
-    // marginLeft: 'auto',
-    // marginRight: 'auto',
-    textAlign: 'center'
-  }
   const name = () => {
     const nameCss = {
-      ...centerItem,
+      display: 'block',
       fontSize: '1.5625rem',
       color: '#FFF',
       paddingTop: '1.3125rem',
-      fontWeight: '700'
+      fontWeight: '700',
+      marginBottom: '0.125rem',
+      lineHeight: '1.8913rem',
     }
     return (
-      <p style={nameCss}>Khodidas Chauhan</p>
+      <span style={nameCss}>Khodidas Chauhan</span>
     )
   }
 
   const designation = () => {
     const designationCss = {
+      display: 'block',
       fontWeight: '400',
       fontSize: '0.8rem',
       color: '#F3BF99',
+      lineHeight: '0.9681rem',
+      marginBottom: '0rem'
     }
 
     return (
-      <p style={designationCss}>
+      <span style={designationCss}>
         Software Engineer
-      </p>
+      </span>
+    )
+  }
+
+  const website = () => {
+    const websiteCss = {
+      fontWeight: '400',
+      fontSize: '0.64rem',
+      color: '#F5F5F5',
+      textAlign: 'center',
+      lineHeight: '0.9681rem',
+    }
+    return (
+      <span style={websiteCss}>
+        khodidaschauhan.com
+      </span>
     )
   }
 
   const aboutCss = {
     backgroundColor: '#1A1B21',
     height: '24.9375rem',
-    // width: '19.8125rem',
+    textAlign: 'center',
   }
-
+  
   return (
     <div style={aboutCss}>
       {name()}
       {designation()}
+      {website()}
     </div>
   );
 }
