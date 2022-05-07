@@ -7,7 +7,6 @@ const InnerCard = () => {
   const cardCss = {
     width: '19.8125rem',
     height: '48.75rem',
-    // backgroundColor: 'pink',
     borderRadius: '0.625rem',
     fontFamily: 'Inter, sans-serif',
   }
