@@ -51,6 +51,7 @@ const PersonalInfo = () => {
   const personalInfoCss = {
     // height: '212.9375rem',
     textAlign: 'center',
+    marginBottom: '0.625rem'
   }
   
   return (

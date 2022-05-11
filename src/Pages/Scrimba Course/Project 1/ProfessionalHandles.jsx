@@ -4,14 +4,13 @@ const ProfessionalHandles = () => {
   const proHandlesCss = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'center'
   }
 
   const boxCss = {
     height: '2.125rem',
     width: '7.1875rem',
     borderRadius: '0.375rem',
-    backgroundColor: 'pink',
     textAlign: 'center',
     display: 'flex',
     alignItems: 'center',
@@ -26,8 +25,13 @@ const ProfessionalHandles = () => {
   }
 
   const email = () => {
+    const emailCss = {
+      ...boxCss,
+      backgroundColor: '#FFF',
+      marginRight: '1.0625rem',
+    }
     return (
-      <div style={boxCss}>
+      <div style={emailCss}>
         <div style={spacingCss}>
           <i style={iconSpacingCss} class="fa-solid fa-envelope"></i>
           Email
@@ -37,8 +41,12 @@ const ProfessionalHandles = () => {
   }
 
   const linkedIn = () => {
+    const linkedInCss = {
+      ...boxCss,
+      backgroundColor: '#5093E2',
+    }
     return (
-      <div style={boxCss}>
+      <div style={linkedInCss}>
         <div style={spacingCss}>
           <i style={iconSpacingCss} class="fa-brands fa-linkedin"></i>
           LinkedIn
