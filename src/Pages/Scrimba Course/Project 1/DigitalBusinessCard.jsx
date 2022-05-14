@@ -13,6 +13,7 @@ const DigitalBusinessCard = () => {
     alignItems: 'center'
   }
   
+  console.log('kd container:', container)
   // TODO: make theme changeable
   return (
       <div style={container}>
