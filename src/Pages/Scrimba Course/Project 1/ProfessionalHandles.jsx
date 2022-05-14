@@ -29,6 +29,7 @@ const ProfessionalHandles = () => {
       ...boxCss,
       backgroundColor: '#FFF',
       marginRight: '1.0625rem',
+      border: '0.0625rem solid #D1D5DB',
     }
     return (
       <div style={emailCss}>
