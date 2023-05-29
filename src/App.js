@@ -11,12 +11,13 @@ import UseStateHook from './Pages/Hooks/UseStateHook'
 import InterviewTest from './Pages/InterviewTest/InterviewTestHomePage'
 import Redux from './Pages/Redux/ReduxHome'
 import { pathNames } from './Pages/Routes/homeRoutes'
-import { hooksRoutes, scrimbaCourseRoutes } from './Pages/Routes/InternalRoutes'
-// import DigitalBusinessCard from './Pages/Scrimba Course/DigitalBusinessCard'
+import { hooksRoutes, scrimbaCourseRoutes, workExperimentRoutes } from './Pages/Routes/InternalRoutes'
+import DigitalBusinessCard from './Pages/ScrimbaCourse/DigitalBusinessCard/DigitalBusinessCard'
 import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
 
 import './App.css'
+import XlsxCsvEditor from './Pages/WorkExperiments/XlsxCsvEditor'
 
 function App() {
 	return (
@@ -29,10 +30,14 @@ function App() {
 					<Route path={hooksRoutes.USE_STATE_HOOK} element={<UseStateHook />} />
 					<Route path={hooksRoutes.USE_EFFECT_HOOK} element={<UseEffectHook />} />
 					<Route path={hooksRoutes.USE_REF_HOOK} element={<UseRefHook />} />
-					<Route path="/work-experiments" element={<WorkExperiments />} />
+					<Route path={pathNames.WORK_EXPERIMENTS} element={<WorkExperiments />} />
 					<Route
-						path="/work-experiments/color-code-retention"
+						path={workExperimentRoutes.COLOR_CODE_RETENTION}
 						element={<ColorCodeRetention />}
+					/>
+					<Route
+						path={workExperimentRoutes.XLSX_CSV_EDITOR}
+						element={<XlsxCsvEditor />}
 					/>
 					<Route
 						path="/functional-programming-in-js"
@@ -42,10 +47,10 @@ function App() {
 						path="/redux"
 						element={<Redux />}
 					/>
-					{/* <Route
+					<Route
 						path={scrimbaCourseRoutes.DIGITAL_BUSSINESS_CARD}
 						element={<DigitalBusinessCard />}
-					/> */}
+					/>
 					<Route
 						path={"/interview-test"}
 						element={<InterviewTest />}

@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import RouteLink from '../../Components/Common/RouteLink'
+import { workExperimentRoutes } from '../Routes/InternalRoutes'
 
 const WorkExperiments = () => {
 	return (
 		<div className="App">
 			<h2>Work Experiment Routes</h2>
-			<h6>
-				<Link to={'/work-experiments/color-code-retention'}>
-					Color Code Retention
-				</Link>
-			</h6>
+			<RouteLink linkTo={workExperimentRoutes.COLOR_CODE_RETENTION} linkTitle={'Color Code Retention'} />
+			<RouteLink linkTo={workExperimentRoutes.XLSX_CSV_EDITOR} linkTitle={'XLSX-CSV Editor'} />
 		</div>
 	)
 }
