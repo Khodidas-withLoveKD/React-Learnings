@@ -1,8 +1,6 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
-import {pathNames} from './Pages/Routes/homeRoutes' 
-import { scrimbaCourseRoutes, hooksRoutes } from './Pages/Routes/InternalRoutes'
 import CounterHome from './Pages/CounterHome'
 import FunctionalProgrammingInJS from './Pages/FunctionalProgrammingInJS'
 import Home from './Pages/Home'
@@ -10,10 +8,13 @@ import Hooks from './Pages/Hooks/HooksHome'
 import UseEffectHook from './Pages/Hooks/UseEffectHook'
 import UseRefHook from './Pages/Hooks/useRef'
 import UseStateHook from './Pages/Hooks/UseStateHook'
+import InterviewTest from './Pages/InterviewTest/InterviewTestHomePage'
 import Redux from './Pages/Redux/ReduxHome'
+import { pathNames } from './Pages/Routes/homeRoutes'
+import { hooksRoutes, scrimbaCourseRoutes } from './Pages/Routes/InternalRoutes'
+// import DigitalBusinessCard from './Pages/Scrimba Course/DigitalBusinessCard'
 import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
-import DigitalBusinessCard from './Pages/Scrimba Course/Project 1/DigitalBusinessCard'
 
 import './App.css'
 
@@ -41,9 +42,13 @@ function App() {
 						path="/redux"
 						element={<Redux />}
 					/>
-					<Route
+					{/* <Route
 						path={scrimbaCourseRoutes.DIGITAL_BUSSINESS_CARD}
 						element={<DigitalBusinessCard />}
+					/> */}
+					<Route
+						path={"/interview-test"}
+						element={<InterviewTest />}
 					/>
 				</Routes>
 			</Router>
