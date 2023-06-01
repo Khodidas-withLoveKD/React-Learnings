@@ -17,7 +17,7 @@ import ColorCodeRetention from './Pages/WorkExperiments/ColorCodeRetention'
 import WorkExperiments from './Pages/WorkExperiments/WorkExperiments'
 
 import './App.css'
-import XlsxCsvEditor from './Pages/WorkExperiments/XlsxCsvEditor'
+import XlsxCsvEditor from './Pages/WorkExperiments/XlsxCsvEditor/XlsxCsvEditor'
 
 function App() {
 	return (

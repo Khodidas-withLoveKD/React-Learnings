@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import RenderTable from "./RenderTable";
+import ReactDataGrid from "./ReactDataGrid";
 
 const XlsxCsvEditor = () => {
   const [file, setFile] = useState(null);
@@ -33,6 +34,7 @@ const XlsxCsvEditor = () => {
       <br />
       <button onClick={parseFile}>Parse File</button>
       {fileData.length && <pre><RenderTable fileData={fileData} /></pre>}
+      <ReactDataGrid/>
     </div>  
     );
 }
