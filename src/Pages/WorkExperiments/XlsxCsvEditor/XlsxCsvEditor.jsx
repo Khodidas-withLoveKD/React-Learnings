@@ -1,16 +1,29 @@
 import { useState } from "react";
 import readXlsxFile from 'read-excel-file';
 
+import CsvParser from './CsvParser';
 import { extractDataFromCsvFile } from "./editorHelper";
-import ReactDataGrid from "./ReactDataGrid";
-import RenderTable from "./RenderTable";
 
 const XlsxCsvEditor = () => {
   const [file, setFile] = useState(null);
   const [fileData, setFileData] = useState([]);
+  const [showCsvParser, setCsvParserVisibility] = useState(false);
+
+  const detectFileType = () => {
+    debugger
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+    if (fileExtension === 'csv') {
+      setCsvParserVisibility(true)
+    } else if (fileExtension === 'xlsx') {
+      setCsvParserVisibility(false)
+    } else {
+      console.log('Error')
+    }
+  } 
 
   const handleFileChange = (event) => {
-    setFile(event.target.files[0])
+    const uploadedFile = event.target.files[0] 
+    setFile(uploadedFile)
   }
 
   const parseCSVFile = () => {
@@ -22,11 +35,14 @@ const XlsxCsvEditor = () => {
     // csv reading
     const reader = new FileReader()
     reader.onload = (event) => {
+      console.log('kd file: ', file)
+      console.log('kd event:', event)
       console.log('kd event.target.result:', event.target.result)
       setFileData(event.target.result)
       const {columns, rows } = extractDataFromCsvFile(event.target.result)
       console.log('kd rows:', rows)
       console.log('kd columns:', columns)
+      // pass rows and columns to reactDataGrid
     }
     reader.readAsText(file)
   }
@@ -38,6 +54,7 @@ const XlsxCsvEditor = () => {
     }
 
     readXlsxFile(file).then((rows) => {
+      console.log('kd file:', file)
       // Process the parsed rows here
       console.log('rows = ', rows);
     }).catch((error) => {
@@ -49,20 +66,12 @@ const XlsxCsvEditor = () => {
 
   return (
     <div>
-      <h2>CSV</h2>
+      <h2>CSV / XLSX</h2>
       <input type="file" onChange={handleFileChange}/>
       <br />
-      <button onClick={parseCSVFile}>Parse File</button>
-      {/* {fileData.length && <pre><RenderTable fileData={fileData} /></pre>} */}
+      <button onClick={detectFileType}>Parse File</button>
       <hr />
-      <h2>XLSX</h2>
-      <input type="file" onChange={handleFileChange}/>
-      <br />
-      <button onClick={paserXlsxFile}>Parse File</button>
-      {/* {fileData.length && <pre><RenderTable fileData={fileData} /></pre>} */}
-      <hr />
-      <h2>react-data-grid</h2>
-      <ReactDataGrid/>
+      {showCsvParser ? <CsvParser file={file} /> : <></>}
     </div>  
     );
 }
