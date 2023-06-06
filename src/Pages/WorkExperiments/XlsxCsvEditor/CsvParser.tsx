@@ -21,12 +21,14 @@ const CsvParser = (props: ICsvParser) => {
   const [rows, setRows] = useState<Array<any>>([])
 
   useEffect(() => {
+    const startTime = performance.now()
     const reader = new FileReader()
     reader.onload = (event) => {
       if (event.target) {
-        const { extractedColumns, extractedRows } = extractDataFromCsvFile(event.target.result as string)
+        const { extractedRows, extractedColumns } = extractDataFromCsvFile(event.target.result as string)
 
         generateRowAndColumsForReactDataGrid(extractedRows, extractedColumns)
+        console.log(`Time taken = ${(startTime - performance.now()) / 1000} seconds`)
       }
     }
     reader.readAsText(file)
@@ -41,7 +43,7 @@ const CsvParser = (props: ICsvParser) => {
     const extractedRows = fileRows.splice(1)
     // console.log('kd rows:', rows)
   
-    return {extractedColumns, extractedRows}
+    return {extractedRows, extractedColumns}
   }
 
   const generateRowAndColumsForReactDataGrid = (rows: Array<any>, columns:any) => {
