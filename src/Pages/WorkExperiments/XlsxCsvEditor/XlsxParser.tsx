@@ -17,6 +17,7 @@ interface IColumnForReactDataGrid {
 
 const XlsxParser = (props: IXlsxParser) => {
   const { file } = props
+  console.log('kd file:', file)
 
   const [columns, setColumns] = useState<Array<any>>([])
   const [rows, setRows] = useState<Array<any>>([])

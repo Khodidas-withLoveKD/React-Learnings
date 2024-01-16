@@ -2,6 +2,7 @@ import { useStyletron } from 'baseui';
 import { useState } from 'react';
 import DataGrid, { Column, textEditor } from 'react-data-grid';
 
+// import 'react-data-grid/dist/react-data-grid.css';
 import 'react-data-grid/lib/styles.css';
 
 enum reactDataGridCssKeys {
@@ -24,39 +25,12 @@ interface IReactDataGrid {
   // setRows: typeof useState;
 }
 
+// const ReactDataGrid = (props: IReactDataGrid) => {
 const ReactDataGrid = (props: IReactDataGrid) => {
-  const { columns, rows, setRows } = props
+  // const { columns, rows, setRows } = props
   const [css, theme] = useStyletron()
 
   const  {COLOR, BACKGROUND_COLOR, BORDER_COLOR, ROW_HOVER_BACKGROUND_COLOR, HEADER_BACKGROUND_COLOR, FONT_SIZE } = reactDataGridCssKeys
-  // const columns: Column<Row>[] = [
-  //   { key: 'serialNo', name: '', frozen: true},
-  //   { key: 'id', name: 'ID', width: 'max-content', resizable: false},
-  //   { key: 'title', name: 'Title', width: 'max-content',
-  //     resizable: true,
-  //     // editable: false,
-  //     editor: textEditor,
-  // },
-  //   { key: 'key4', name: 'key4',editor: textEditor,},
-  //   { key: 'key5', name: 'key5'},
-  //   { key: 'key6', name: 'key6'},
-  // ];
-  
-  // const [rows, setRows] = useState<Array<any>>([
-  //   { serialNo: '1', id: 0, title: 'Example' },
-  //   { serialNo: '2', id: 1, title: 'Demo' },
-  //   { serialNo: '1', id: 2, title: 'Exampleeeeeeeeeeee' },
-  //   { serialNo: '2', id: 3, title: 'Demo' },
-  //   { serialNo: '1', id: 4, title: 'Example' },
-  //   { serialNo: '2', id: 5, title: 'Demo' },
-  //   { serialNo: '1', id: 6, title: 'Example' },
-  //   { serialNo: '2', id: 7, title: 'Demo' },
-  //   { serialNo: '1', id: 8, title: 'Example' },
-  //   { serialNo: '2', id: 9, title: 'Demo' },
-  //   { serialNo: '1', id: 10, title: 'Example' },
-  //   { serialNo: '2', id: 11, title: 'Demo' }
-  // ]);
-
 
   const goodCss = css({
     [COLOR]: 'green',
@@ -68,9 +42,44 @@ const ReactDataGrid = (props: IReactDataGrid) => {
     width: '1000px',
   })
 
+  const completedCss = css({
+    color: 'green',
+    backgroundColor: 'lime'
+  })
+
+  const pendingCss = css({
+    color: 'red',
+    backgroundColor: 'orange'
+  })
+
+  const columns: Array<Column<any>> = [
+    {
+      key: 'status',
+    name: 'Status',
+    // cellClass: ({ value } : {value:any}) => {
+    formatter: ({row}) => {
+      console.log('kd row:', row)
+      let cellClass
+      if (row.status === 'Completed') {
+        cellClass = completedCss;
+      } else if (row.status === 'Pending') {
+        cellClass = pendingCss;
+      }
+
+      return <div className={cellClass}>{row.status}</div>;
+    },
+  },
+  ]
+
+  const rows = [
+    { id: 1, status: 'Completed' },
+    { id: 2, status: 'Pending' },
+    // Add more data rows as needed
+  ];
+
   return <DataGrid 
     className={goodCss} columns={columns} rows={rows}
-    onRowsChange={setRows}
+    // onRowsChange={setRows}
     />;
 }
  
