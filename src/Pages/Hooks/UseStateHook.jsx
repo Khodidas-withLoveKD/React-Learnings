@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const useStateHook = () => {
+const UseStateHook = () => {
 	const [count, setCount] = useState(4)
 
 	const decrementCount = () => {
@@ -28,4 +28,4 @@ const useStateHook = () => {
 	)
 }
 
-export default useStateHook
+export default UseStateHook

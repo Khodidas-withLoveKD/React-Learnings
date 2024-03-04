@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import { parentPaths, scrimbaCoursePaths } from '../Router/allPaths'
+import RouteLink from '../Components/Common/RouteLink'
 
 class Home extends React.Component {
 	render() {
@@ -9,32 +9,23 @@ class Home extends React.Component {
 			<React.Fragment>
 				<div className="App">
 					<h2>All Routes</h2>
-					<h6>
-						<Link to="/counters">Counters</Link>
-					</h6>
-					<h6>
-						<Link to="/hooks">Hooks</Link>
-					</h6>
-					<h6>
-						<Link to="/work-experiments/">Work Experiments</Link>
-					</h6>
-					<h6>
-						<Link to="/functional-programming-in-js/">
-							Functional Programming in JS
-						</Link>
-					</h6>
-					<h6>
-						<Link to="/redux">Redux</Link>
-					</h6>
-					<h6>
-						<Link
-							to={
-								parentPaths.SCRIMBA + scrimbaCoursePaths.DIGITAL_BUSSINESS_CARD
-							}
-						>
-							Scrimba Course
-						</Link>
-					</h6>
+					<RouteLink linkTo={'/counters'} linkTitle={'Counters'} />
+					<RouteLink linkTo={'/hooks'} linkTitle={'Hooks'} />
+					<RouteLink
+						linkTo={parentPaths.WORK_EXPERIMENTS}
+						linkTitle={'Work Experiments'}
+					/>
+					<RouteLink
+						linkTo={'/functional-programming-in-js/'}
+						linkTitle={'Functional Programming in JS'}
+					/>
+					<RouteLink linkTo={'/redux'} linkTitle={'Redux'} />
+					<RouteLink
+						linkTo={
+							parentPaths.SCRIMBA + scrimbaCoursePaths.DIGITAL_BUSSINESS_CARD
+						}
+						linkTitle={'Scrimba Course'}
+					/>
 				</div>
 			</React.Fragment>
 		)
