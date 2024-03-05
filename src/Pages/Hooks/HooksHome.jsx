@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { hooksPaths } from '../../Router/allPaths'
 import RouteLink from '../../Components/Common/RouteLink'
 

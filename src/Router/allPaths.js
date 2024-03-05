@@ -7,6 +7,7 @@ export const parentPaths = {
 
 export const otherPaths = {
 	COUNTER_TUTORIAL: 'counters',
+	REDUX: '/redux',
 }
 
 export const scrimbaCoursePaths = {

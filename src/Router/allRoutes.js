@@ -17,6 +17,9 @@ import ColorCodeRetention from '../Pages/WorkExperiments/ColorCodeRetention'
 import XlsxCsvEditor from '../Pages/WorkExperiments/XlsxCsvEditor/XlsxCsvEditor'
 import CounterHome from '../Pages/CounterHome'
 import HooksHome from '../Pages/Hooks/HooksHome'
+import WorkExperiments from '../Pages/WorkExperiments/WorkExperiments'
+import Redux from '../Pages/Redux/ReduxHome'
+// import TodoPageContainer from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/'
 
 const otherRoutes = [
 	{
@@ -26,6 +29,10 @@ const otherRoutes = [
 	{
 		path: otherPaths.COUNTER_TUTORIAL,
 		element: <CounterHome />,
+	},
+	{
+		path: otherPaths.REDUX,
+		element: <Redux />,
 	},
 ]
 
@@ -65,6 +72,10 @@ const workExperimentRoutes = {
 	path: parentPaths.WORK_EXPERIMENTS,
 	children: [
 		{
+			path: '',
+			element: <WorkExperiments />,
+		},
+		{
 			path: workExperimentPaths.COLOR_CODE_RETENTION,
 			element: <ColorCodeRetention />,
 		},
@@ -79,8 +90,8 @@ const reactBestPracticesRoutes = {
 	path: parentPaths.REACT_BEST_PRACTICES,
 	children: [
 		{
-			path: workExperimentPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
-			// element: <TodoPageContainer />,
+			path: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
+			// element: <TodoPageContainer/>
 		},
 	],
 }
