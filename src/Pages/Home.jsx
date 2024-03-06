@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { parentPaths, scrimbaCoursePaths } from '../Router/allPaths'
+import {
+	parentPaths,
+	reactBestPracticesPaths,
+	scrimbaCoursePaths,
+} from '../Router/allPaths'
 import RouteLink from '../Components/Common/RouteLink'
 
 class Home extends React.Component {
@@ -25,6 +29,13 @@ class Home extends React.Component {
 							parentPaths.SCRIMBA + scrimbaCoursePaths.DIGITAL_BUSSINESS_CARD
 						}
 						linkTitle={'Scrimba Course'}
+					/>
+					<RouteLink
+						linkTo={
+							parentPaths.REACT_BEST_PRACTICES +
+							reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS
+						}
+						linkTitle={'React Best Practices'}
 					/>
 				</div>
 			</React.Fragment>

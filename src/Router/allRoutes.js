@@ -19,7 +19,7 @@ import CounterHome from '../Pages/CounterHome'
 import HooksHome from '../Pages/Hooks/HooksHome'
 import WorkExperiments from '../Pages/WorkExperiments/WorkExperiments'
 import Redux from '../Pages/Redux/ReduxHome'
-// import TodoPageContainer from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/'
+import TodoListPage from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/TodoListPage'
 
 const otherRoutes = [
 	{
@@ -91,7 +91,7 @@ const reactBestPracticesRoutes = {
 	children: [
 		{
 			path: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
-			// element: <TodoPageContainer/>
+			element: <TodoListPage />,
 		},
 	],
 }

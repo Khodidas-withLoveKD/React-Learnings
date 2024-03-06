@@ -2,7 +2,7 @@ export const parentPaths = {
 	SCRIMBA: 'scrimba-course/',
 	HOOKS: 'hooks/',
 	WORK_EXPERIMENTS: '/work-experiments/',
-	REACT_BEST_PRACTICES: '/react-best-practices',
+	REACT_BEST_PRACTICES: '/react-best-practices/',
 }
 
 export const otherPaths = {
@@ -26,5 +26,5 @@ export const workExperimentPaths = {
 }
 
 export const reactBestPracticesPaths = {
-	PAGE_AND_PRESENTATIONAL_COMPONENTS: '/pages-and-presentational-components',
+	PAGE_AND_PRESENTATIONAL_COMPONENTS: 'pages-and-presentational-components',
 }
