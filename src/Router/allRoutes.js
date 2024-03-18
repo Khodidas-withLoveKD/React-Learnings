@@ -1,4 +1,3 @@
-import Home from '../Pages/Home'
 import {
 	parentPaths,
 	hooksPaths,
@@ -20,11 +19,12 @@ import HooksHome from '../Pages/Hooks/HooksHome'
 import WorkExperiments from '../Pages/WorkExperiments/WorkExperiments'
 import Redux from '../Pages/Redux/ReduxHome'
 import TodoListPage from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/TodoListPage'
+import { HomePage } from '../Components/shared/HomePageRouter'
 
 const otherRoutes = [
 	{
 		path: '/',
-		element: <Home />,
+		element: <HomePage />,
 	},
 	{
 		path: otherPaths.COUNTER_TUTORIAL,
