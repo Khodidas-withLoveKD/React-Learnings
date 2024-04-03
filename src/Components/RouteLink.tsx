@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { IRouteLink } from '../../shared/interfaces'
+import { IRouteLink } from '../shared/interfaces'
 
 const RouteLink = ({ path, title }: IRouteLink) => (
 	<h6>

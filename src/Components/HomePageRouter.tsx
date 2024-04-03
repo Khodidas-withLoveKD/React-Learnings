@@ -1,6 +1,6 @@
-import { HomePageRoutes } from '../../Router/HomePagesRoutes'
-import { IRouteLink } from '../../shared/interfaces'
-import { HomePageRoutesType } from '../../shared/types'
+import { HomePageRoutes } from '../Router/HomePagesRoutes'
+import { IRouteLink } from '../shared/interfaces'
+import { HomePageRoutesType } from '../shared/types'
 import RouteLink from './RouteLink'
 
 interface IHomePageRouter {

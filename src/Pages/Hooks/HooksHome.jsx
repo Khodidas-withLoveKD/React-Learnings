@@ -1,6 +1,6 @@
 import React from 'react'
 import { hooksPaths } from '../../Router/allPaths'
-import RouteLink from '../../Components/shared/RouteLink'
+import RouteLink from '../../Components/RouteLink'
 
 const HooksHome = () => {
 	return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RouteLink from '../../Components/shared/RouteLink'
+import RouteLink from '../../Components/RouteLink'
 import { workExperimentPaths } from '../../Router/allPaths'
 
 const WorkExperiments = () => {
