@@ -1,0 +1,20 @@
+.form {
+}
+
+.form_label {
+	background-color: pink;
+}
+
+.form_input {
+	/* font-size: 10px; */
+	background-color: aqua;
+}
+
+.disclaimer {
+	font-weight: 500;
+	border-bottom: 2px solid black;
+}
+
+.input_wrapper {
+	margin-bottom: 15px;
+}
