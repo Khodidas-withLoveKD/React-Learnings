@@ -19,7 +19,11 @@ import HooksHome from '../Pages/Hooks/HooksHome'
 import WorkExperiments from '../Pages/WorkExperiments/WorkExperiments'
 import Redux from '../Pages/Redux/ReduxHome'
 import TodoListPage from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/TodoListPage'
-import { HomePage } from '../Components/HomePageRouter'
+import {
+	HomePage,
+	ReactBestPracticesHomePage,
+} from '../Components/HomePageRouter'
+import KDReactHookForm from '../Pages/ReactBestPractices/CustomHooks/KDReactHookForm'
 
 const otherRoutes = [
 	{
@@ -90,8 +94,16 @@ const reactBestPracticesRoutes = {
 	path: parentPaths.REACT_BEST_PRACTICES,
 	children: [
 		{
+			path: '',
+			element: <ReactBestPracticesHomePage />,
+		},
+		{
 			path: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
 			element: <TodoListPage />,
+		},
+		{
+			path: reactBestPracticesPaths.CUSTOM_HOOKS,
+			element: <KDReactHookForm />,
 		},
 	],
 }

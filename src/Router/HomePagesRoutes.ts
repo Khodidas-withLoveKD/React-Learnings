@@ -22,6 +22,14 @@ export const HomePageRoutes: HomePageRoutesType = [
 	},
 	{
 		path: parentPaths.REACT_BEST_PRACTICES,
-		title: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
+		title: 'React Best Practices',
 	},
+]
+
+export const ReactBestPracticesRoutes: HomePageRoutesType = [
+	{
+		path: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
+		title: 'Pages And Presentational Components',
+	},
+	{ path: reactBestPracticesPaths.CUSTOM_HOOKS, title: 'Custom Hooks' },
 ]

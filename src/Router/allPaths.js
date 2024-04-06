@@ -27,4 +27,5 @@ export const workExperimentPaths = {
 
 export const reactBestPracticesPaths = {
 	PAGE_AND_PRESENTATIONAL_COMPONENTS: 'pages-and-presentational-components',
+	CUSTOM_HOOKS: 'custom-hooks',
 }

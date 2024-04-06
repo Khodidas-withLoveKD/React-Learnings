@@ -1,4 +1,7 @@
-import { HomePageRoutes } from '../Router/HomePagesRoutes'
+import {
+	HomePageRoutes,
+	ReactBestPracticesRoutes,
+} from '../Router/HomePagesRoutes'
 import { IRouteLink } from '../shared/interfaces'
 import { HomePageRoutesType } from '../shared/types'
 import RouteLink from './RouteLink'
@@ -26,4 +29,11 @@ const HomePage = () => (
 	<HomePageRouter heading="All Routes" routes={HomePageRoutes} />
 )
 
-export { HomePage }
+const ReactBestPracticesHomePage = () => (
+	<HomePageRouter
+		heading="React Best Practices"
+		routes={ReactBestPracticesRoutes}
+	/>
+)
+
+export { HomePage, ReactBestPracticesHomePage }
