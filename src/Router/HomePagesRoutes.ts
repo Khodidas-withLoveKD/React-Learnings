@@ -1,5 +1,6 @@
 import { HomePageRoutesType } from '../shared/types'
 import {
+	InterviewPrepPaths,
 	parentPaths,
 	reactBestPracticesPaths,
 	scrimbaCoursePaths,
@@ -24,12 +25,27 @@ export const HomePageRoutes: HomePageRoutesType = [
 		path: parentPaths.REACT_BEST_PRACTICES,
 		title: 'React Best Practices',
 	},
+	{
+		path: InterviewPrepPaths.INTERVIEW_PREP,
+		title: 'Interview Prep',
+	},
 ]
+
+const {
+	PAGE_AND_PRESENTATIONAL_COMPONENTS,
+	CUSTOM_HOOKS,
+	HIGHER_ORDER_COMPONENTS,
+} = reactBestPracticesPaths
 
 export const ReactBestPracticesRoutes: HomePageRoutesType = [
 	{
-		path: reactBestPracticesPaths.PAGE_AND_PRESENTATIONAL_COMPONENTS,
+		path: PAGE_AND_PRESENTATIONAL_COMPONENTS,
 		title: 'Pages And Presentational Components',
 	},
-	{ path: reactBestPracticesPaths.CUSTOM_HOOKS, title: 'Custom Hooks' },
+	{ path: CUSTOM_HOOKS, title: 'Custom Hooks' },
+	{ path: HIGHER_ORDER_COMPONENTS, title: 'Higher Order Components' },
+]
+
+export const InterviewPrepRoutes: HomePageRoutesType = [
+	{ path: InterviewPrepPaths.MISCELLANEOUS, title: 'Miscellaneous' },
 ]
