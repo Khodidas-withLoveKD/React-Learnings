@@ -1,6 +1,7 @@
 import { HomePageRoutesType } from '../shared/types'
 import {
 	InterviewPrepPaths,
+	hooksPaths,
 	parentPaths,
 	reactBestPracticesPaths,
 	scrimbaCoursePaths,
@@ -10,7 +11,7 @@ import {
 
 export const HomePageRoutes: HomePageRoutesType = [
 	{ path: '/counters', title: 'Counters' },
-	{ path: '/hooks', title: 'Hooks' },
+	{ path: parentPaths.HOOKS, title: 'Hooks' },
 	{ path: parentPaths.WORK_EXPERIMENTS, title: 'Work Experiments' },
 	{
 		path: '/functional-programming-in-js/',
@@ -29,6 +30,12 @@ export const HomePageRoutes: HomePageRoutesType = [
 		path: InterviewPrepPaths.INTERVIEW_PREP,
 		title: 'Interview Prep',
 	},
+]
+
+export const HooksRoutes: HomePageRoutesType = [
+	{ path: hooksPaths.USE_STATE_HOOK, title: 'Use State Hook' },
+	{ path: hooksPaths.USE_EFFECT_HOOK, title: 'Use Effect Hook' },
+	{ path: hooksPaths.USE_REF_HOOK, title: 'Use Ref Hook' },
 ]
 
 const {

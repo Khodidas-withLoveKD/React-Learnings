@@ -16,7 +16,6 @@ import UseRefHook from '../Pages/Hooks/useRef'
 import ColorCodeRetention from '../Pages/WorkExperiments/ColorCodeRetention'
 import XlsxCsvEditor from '../Pages/WorkExperiments/XlsxCsvEditor/XlsxCsvEditor'
 import CounterHome from '../Pages/CounterHome'
-import HooksHome from '../Pages/Hooks/HooksHome'
 import WorkExperiments from '../Pages/WorkExperiments/WorkExperiments'
 import Redux from '../Pages/Redux/ReduxHome'
 import TodoListPage from '../Pages/ReactBestPractices/PagesAndPresentationalComponents/TodoListPage'
@@ -24,6 +23,7 @@ import {
 	HomePage,
 	ReactBestPracticesHomePage,
 	InterviewPrepHomePage,
+	HooksHomePage,
 } from '../Components/HomePageRouter'
 import KDReactHookForm from '../Pages/ReactBestPractices/CustomHooks/KDReactHookForm'
 import HOCHome from '../Pages/ReactBestPractices/HigherOrderComponents/HOCHome'
@@ -59,7 +59,7 @@ const hooksRoutes = {
 	children: [
 		{
 			path: '',
-			element: <HooksHome />,
+			element: <HooksHomePage />,
 		},
 		{
 			path: hooksPaths.USE_STATE_HOOK,

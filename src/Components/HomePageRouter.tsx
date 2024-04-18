@@ -1,5 +1,7 @@
 import {
 	HomePageRoutes,
+	HooksRoutes,
+	InterviewPrepRoutes,
 	ReactBestPracticesRoutes,
 } from '../Router/HomePagesRoutes'
 import { IRouteLink } from '../shared/interfaces'
@@ -36,4 +38,20 @@ const ReactBestPracticesHomePage = () => (
 	/>
 )
 
-export { HomePage, ReactBestPracticesHomePage }
+const InterviewPrepHomePage = () => (
+	<HomePageRouter
+		heading="Interview Preparation"
+		routes={InterviewPrepRoutes}
+	/>
+)
+
+const HooksHomePage = () => (
+	<HomePageRouter heading="Hooks Routes" routes={HooksRoutes} />
+)
+
+export {
+	HomePage,
+	ReactBestPracticesHomePage,
+	InterviewPrepHomePage,
+	HooksHomePage,
+}

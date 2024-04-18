@@ -1,6 +1,6 @@
 export const parentPaths = {
 	SCRIMBA: 'scrimba-course/',
-	HOOKS: 'hooks/',
+	HOOKS: '/hooks',
 	WORK_EXPERIMENTS: '/work-experiments/',
 	REACT_BEST_PRACTICES: '/react-best-practices/',
 }
@@ -28,4 +28,10 @@ export const workExperimentPaths = {
 export const reactBestPracticesPaths = {
 	PAGE_AND_PRESENTATIONAL_COMPONENTS: 'pages-and-presentational-components',
 	CUSTOM_HOOKS: 'custom-hooks',
+	HIGHER_ORDER_COMPONENTS: 'higher-order-components',
+}
+
+export const InterviewPrepPaths = {
+	INTERVIEW_PREP: 'interview-prep',
+	MISCELLANEOUS: 'miscellaneous',
 }
