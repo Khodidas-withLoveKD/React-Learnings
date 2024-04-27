@@ -51,12 +51,92 @@ const ScrollContainter = () => {
 	)
 }
 
+interface Panel {
+	isOpen: boolean
+	setIsOpen: (val: number) => void
+	panelIndex: number
+}
+
+const Accordion = () => {
+	const Panel = (props: Panel) => {
+		const { isOpen, setIsOpen, panelIndex } = props
+
+		const commonStyles = {
+			borderBottom: '2px solid black',
+			marginBottom: '10px',
+		}
+
+		const panelStyles = {
+			active: {
+				backgroundColor: 'lime',
+				...commonStyles,
+			},
+			inactive: {
+				...commonStyles,
+			},
+		}
+
+		const openCloseButton = (
+			<button onClick={() => setIsOpen(panelIndex)}>
+				{isOpen ? 'Close' : 'Open'}
+			</button>
+		)
+
+		const content =
+			"Thisi sis a vaery logn contetnt KD. THis is also you typing test and le's see how you can make it damn work"
+
+		return (
+			<div style={isOpen ? panelStyles.active : panelStyles.inactive}>
+				{isOpen && content}
+				{openCloseButton}
+			</div>
+		)
+	}
+
+	const [panels, setPanels] = useState<Array<number>>([0])
+	const [openPanelIndex, setOpenPanelIndex] = useState<number>()
+
+	const accordionStyles = {
+		accordion: {
+			width: '150px',
+			backgroundColor: 'cyan',
+		},
+	}
+
+	const addPanel = () => {
+		setPanels([...panels, panels.length])
+	}
+
+	// const deletePanel = (panelToRemoveIndex: number) => {
+	// 	setPanels(
+	// 		panels.filter(
+	// 			(_, index: number) => index !== panelToRemoveIndex
+	// 		)
+	// 	)
+	// }
+
+	return (
+		<div style={accordionStyles.accordion}>
+			{panels?.map((index: number) => (
+				<Panel
+					isOpen={openPanelIndex === index}
+					setIsOpen={setOpenPanelIndex}
+					panelIndex={index}
+				/>
+			))}
+			<button onClick={addPanel}>Add Panel</button>
+			{/* <button onClick={() => deletePanel()}>Delete Panel</button> */}
+		</div>
+	)
+}
+
 const Miscellaneous = () => {
 	// page scroll progress bar
 
 	return (
 		<>
-			<ScrollContainter />
+			{/* <ScrollContainter /> */}
+			<Accordion />
 		</>
 	)
 }
