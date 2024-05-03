@@ -130,13 +130,57 @@ const Accordion = () => {
 	)
 }
 
+const AsyncAwaitVsPromise = () => {
+	const start = () => console.log('START')
+
+	const end = () => console.log('END')
+
+	const afterResponse = () => console.log('AFTER RESPONSE')
+
+	const aysncAwait = () => {
+		const asyncFunction = async () => {
+			const response = await fetch(
+				'https://jsonplaceholder.typicode.com/todos/1'
+			)
+			// response  response.json()
+			// .then(json => json)
+
+			console.log('kd response:', response.json())
+			afterResponse()
+		}
+
+		console.log('ASYNC AWAIT')
+		start()
+		asyncFunction()
+		end()
+	}
+
+	const promiseThen = () => {
+		const promiseFunc = () => {
+			fetch('https://jsonplaceholder.typicode.com/todos/1')
+				.then((response) => response.json())
+				.then((json) => console.log('response = ', json))
+
+			afterResponse()
+		}
+
+		console.log('PROMISE')
+		start()
+		promiseFunc()
+		end()
+	}
+
+	return <>{promiseThen()}</>
+}
+
 const Miscellaneous = () => {
 	// page scroll progress bar
 
 	return (
 		<>
 			{/* <ScrollContainter /> */}
-			<Accordion />
+			{/* <Accordion /> */}
+			<AsyncAwaitVsPromise />
 		</>
 	)
 }
