@@ -28,6 +28,7 @@ import {
 import KDReactHookForm from '../Pages/ReactBestPractices/CustomHooks/KDReactHookForm'
 import HOCHome from '../Pages/ReactBestPractices/HigherOrderComponents/HOCHome'
 import Miscellaneous from '../Pages/InterveiewPrep/Miscellaneous/Miscellaneous'
+import ResponsiveDesign from '../Pages/InterveiewPrep/ResponsiveDesign/ResponsiveDesign'
 
 const otherRoutes = [
 	{
@@ -126,6 +127,10 @@ const InterviewPrepRoutes = {
 		{
 			path: InterviewPrepPaths.MISCELLANEOUS,
 			element: <Miscellaneous />,
+		},
+		{
+			path: InterviewPrepPaths.RESPONSIVE_DESIGN,
+			element: <ResponsiveDesign />,
 		},
 	],
 }

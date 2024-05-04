@@ -170,7 +170,8 @@ const AsyncAwaitVsPromise = () => {
 		end()
 	}
 
-	return <>{promiseThen()}</>
+	// return <>{promiseThen()}</>
+	return <>{aysncAwait()}</>
 }
 
 const Miscellaneous = () => {

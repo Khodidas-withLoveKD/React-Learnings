@@ -34,4 +34,5 @@ export const reactBestPracticesPaths = {
 export const InterviewPrepPaths = {
 	INTERVIEW_PREP: 'interview-prep',
 	MISCELLANEOUS: 'miscellaneous',
+	RESPONSIVE_DESIGN: 'responsive-design',
 }
