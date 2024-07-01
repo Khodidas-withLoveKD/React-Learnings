@@ -36,6 +36,7 @@ export const HooksRoutes: HomePageRoutesType = [
 	{ path: hooksPaths.USE_STATE_HOOK, title: 'Use State Hook' },
 	{ path: hooksPaths.USE_EFFECT_HOOK, title: 'Use Effect Hook' },
 	{ path: hooksPaths.USE_REF_HOOK, title: 'Use Ref Hook' },
+	{ path: hooksPaths.USE_CONTEXT_HOOK, title: 'Use Context Hook' },
 ]
 
 const {

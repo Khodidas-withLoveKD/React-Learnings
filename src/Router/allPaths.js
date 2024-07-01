@@ -18,6 +18,7 @@ export const hooksPaths = {
 	USE_STATE_HOOK: 'use-state-hook',
 	USE_EFFECT_HOOK: 'use-effect-hook',
 	USE_REF_HOOK: 'use-ref-hook',
+	USE_CONTEXT_HOOK: 'use-context',
 }
 
 export const workExperimentPaths = {

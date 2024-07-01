@@ -29,6 +29,7 @@ import KDReactHookForm from '../Pages/ReactBestPractices/CustomHooks/KDReactHook
 import HOCHome from '../Pages/ReactBestPractices/HigherOrderComponents/HOCHome'
 import Miscellaneous from '../Pages/InterveiewPrep/Miscellaneous/Miscellaneous'
 import ResponsiveDesign from '../Pages/InterveiewPrep/ResponsiveDesign/ResponsiveDesign'
+import UseContext from '../Pages/Hooks/useContext/UseContext'
 
 const otherRoutes = [
 	{
@@ -73,6 +74,10 @@ const hooksRoutes = {
 		{
 			path: hooksPaths.USE_REF_HOOK,
 			element: <UseRefHook />,
+		},
+		{
+			path: hooksPaths.USE_CONTEXT_HOOK,
+			element: <UseContext />,
 		},
 	],
 }
