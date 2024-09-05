@@ -27,10 +27,10 @@ import {
 } from '../Components/HomePageRouter'
 import KDReactHookForm from '../Pages/ReactBestPractices/CustomHooks/KDReactHookForm'
 import HOCHome from '../Pages/ReactBestPractices/HigherOrderComponents/HOCHome'
-import Miscellaneous from '../Pages/InterveiewPrep/Miscellaneous/Miscellaneous'
-import ResponsiveDesign from '../Pages/InterveiewPrep/ResponsiveDesign/ResponsiveDesign'
+import Miscellaneous from '../Pages/InterviewPrep/Miscellaneous/Miscellaneous'
+import ResponsiveDesign from '../Pages/InterviewPrep/ResponsiveDesign/ResponsiveDesign'
 import UseContext from '../Pages/Hooks/useContext/UseContext'
-import Debounce from '../Pages/InterveiewPrep/Debounce/Debounce'
+import Debounce from '../Pages/InterviewPrep/Debounce/Debounce'
 
 const otherRoutes = [
 	{

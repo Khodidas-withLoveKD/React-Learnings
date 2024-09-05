@@ -12,6 +12,7 @@ const ScrollContainter = () => {
 			const scrolledPercentage = (scrolled / scrollableHeight) * 100
 			setScrollBarWidth(scrolledPercentage)
 		}
+		new Promise((resolve, reject) => resolve(100))
 
 		document.addEventListener('scroll', handleScroll)
 
@@ -159,7 +160,7 @@ const AsyncAwaitVsPromise = () => {
 		const promiseFunc = () => {
 			fetch('https://jsonplaceholder.typicode.com/todos/1')
 				.then((response) => response.json())
-				.then((json) => console.log('response = ', json))
+				.then((json) => console.log('kd response = ', json))
 
 			afterResponse()
 		}
@@ -170,8 +171,8 @@ const AsyncAwaitVsPromise = () => {
 		end()
 	}
 
-	// return <>{promiseThen()}</>
-	return <>{aysncAwait()}</>
+	return <>{promiseThen()}</>
+	// return <>{aysncAwait()}</>
 }
 
 const Miscellaneous = () => {
