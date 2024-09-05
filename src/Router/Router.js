@@ -30,6 +30,7 @@ import HOCHome from '../Pages/ReactBestPractices/HigherOrderComponents/HOCHome'
 import Miscellaneous from '../Pages/InterveiewPrep/Miscellaneous/Miscellaneous'
 import ResponsiveDesign from '../Pages/InterveiewPrep/ResponsiveDesign/ResponsiveDesign'
 import UseContext from '../Pages/Hooks/useContext/UseContext'
+import Debounce from '../Pages/InterveiewPrep/Debounce/Debounce'
 
 const otherRoutes = [
 	{
@@ -136,6 +137,10 @@ const InterviewPrepRoutes = {
 		{
 			path: InterviewPrepPaths.RESPONSIVE_DESIGN,
 			element: <ResponsiveDesign />,
+		},
+		{
+			path: InterviewPrepPaths.DEBOUNCE,
+			element: <Debounce />,
 		},
 	],
 }

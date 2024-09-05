@@ -20,3 +20,5 @@ const Heading = ({ children }: { children: string }) => {
 }
 
 export default Heading
+
+// TODO: implement render props

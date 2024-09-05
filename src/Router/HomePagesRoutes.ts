@@ -57,4 +57,5 @@ export const ReactBestPracticesRoutes: HomePageRoutesType = [
 export const InterviewPrepRoutes: HomePageRoutesType = [
 	{ path: InterviewPrepPaths.MISCELLANEOUS, title: 'Miscellaneous' },
 	{ path: InterviewPrepPaths.RESPONSIVE_DESIGN, title: 'Responsive Design' },
+	{ path: InterviewPrepPaths.DEBOUNCE, title: 'Debounce' },
 ]
