@@ -1,4 +1,4 @@
-import { HomePageRoutesType } from '../shared/types'
+import { HomePageRoutesType } from 'shared/types'
 import {
 	InterviewPrepPaths,
 	hooksPaths,

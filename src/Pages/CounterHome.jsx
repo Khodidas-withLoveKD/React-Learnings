@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Counters from '../Components/CounterTutorial/Counters'
-import NavBar from '../Components/CounterTutorial/NavBar'
+import NavBar from 'Components/CounterTutorial/NavBar'
+import Counters from 'Components/CounterTutorial/Counters'
 
 class CounterHome extends React.Component {
 	state = {

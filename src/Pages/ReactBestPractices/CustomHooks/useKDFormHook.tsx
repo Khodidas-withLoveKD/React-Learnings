@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { IObjProps } from '../../../shared/interfaces'
+import { IObjProps } from 'shared/interfaces'
 
 const useKDFormHook = () => {
 	const [formValues, setFormValues] = useState<IObjProps>({})

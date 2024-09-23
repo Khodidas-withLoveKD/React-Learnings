@@ -1,7 +1,7 @@
 import React from 'react'
 
-import RouteLink from '../../Components/RouteLink'
-import { workExperimentPaths } from '../../Router/allPaths'
+import RouteLink from 'Components/RouteLink'
+import { workExperimentPaths } from 'Router/allPaths'
 
 const WorkExperiments = () => {
 	return (
