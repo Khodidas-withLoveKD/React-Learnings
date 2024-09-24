@@ -20,7 +20,7 @@ const HomePageRouter = (props: IHomePageRouter) => {
 		<div>
 			<h2>{heading}</h2>
 			{routes.map(({ path, title }: IRouteLink) => (
-				<RouteLink path={path} title={title} />
+				<RouteLink path={path} title={title} key={path} />
 			))}
 		</div>
 	)

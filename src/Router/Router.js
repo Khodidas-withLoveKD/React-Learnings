@@ -31,6 +31,7 @@ import Miscellaneous from 'Pages/InterviewPrep/Miscellaneous/Miscellaneous'
 import ResponsiveDesign from 'Pages/InterviewPrep/ResponsiveDesign/ResponsiveDesign'
 import UseContext from 'Pages/Hooks/useContext/UseContext'
 import Debounce from 'Pages/InterviewPrep/Debounce/Debounce'
+import RenderProp from 'Pages/ReactBestPractices/RenderProps/RenderProp'
 
 const otherRoutes = [
 	{
@@ -119,6 +120,10 @@ const reactBestPracticesRoutes = {
 		{
 			path: reactBestPracticesPaths.HIGHER_ORDER_COMPONENTS,
 			element: <HOCHome />,
+		},
+		{
+			path: reactBestPracticesPaths.RENDER_PROPS,
+			element: <RenderProp />,
 		},
 	],
 }

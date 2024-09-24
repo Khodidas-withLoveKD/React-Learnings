@@ -43,6 +43,7 @@ const {
 	PAGE_AND_PRESENTATIONAL_COMPONENTS,
 	CUSTOM_HOOKS,
 	HIGHER_ORDER_COMPONENTS,
+	RENDER_PROPS,
 } = reactBestPracticesPaths
 
 export const ReactBestPracticesRoutes: HomePageRoutesType = [
@@ -52,6 +53,7 @@ export const ReactBestPracticesRoutes: HomePageRoutesType = [
 	},
 	{ path: CUSTOM_HOOKS, title: 'Custom Hooks' },
 	{ path: HIGHER_ORDER_COMPONENTS, title: 'Higher Order Components' },
+	{ path: RENDER_PROPS, title: 'Render Prop' },
 ]
 
 export const InterviewPrepRoutes: HomePageRoutesType = [

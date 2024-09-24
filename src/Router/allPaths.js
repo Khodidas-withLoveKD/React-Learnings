@@ -30,6 +30,7 @@ export const reactBestPracticesPaths = {
 	PAGE_AND_PRESENTATIONAL_COMPONENTS: 'pages-and-presentational-components',
 	CUSTOM_HOOKS: 'custom-hooks',
 	HIGHER_ORDER_COMPONENTS: 'higher-order-components',
+	RENDER_PROPS: 'render-props',
 }
 
 export const InterviewPrepPaths = {
